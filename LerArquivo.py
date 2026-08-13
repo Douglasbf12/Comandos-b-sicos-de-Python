@@ -23,4 +23,8 @@ for arquivo in todos_os_arquivos:
         with open(caminho_completo, mode="r", encoding="utf-8") as f:
     #encoding="utf-8": Garante a leitura correta de ç, acentos e caracteres especiais.
     #as f: Dá o apelido temporário f para esse arquivo aberto.
+         leitor = csv.reader(f) 
+    #csv.reader(f): Prepara o leitor para entender o conteúdo do arquivo f como uma tabela CSV.
+         colunas = next(leitor)
+    #next(leitor): Lê apenas a primeira linha do arquivo (que contém o nome das colunas) e salva essa lista dentro da variável colunas.
          
