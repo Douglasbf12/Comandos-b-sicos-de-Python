@@ -27,4 +27,6 @@ for arquivo in todos_os_arquivos:
     #csv.reader(f): Prepara o leitor para entender o conteúdo do arquivo f como uma tabela CSV.
          colunas = next(leitor)
     #next(leitor): Lê apenas a primeira linha do arquivo (que contém o nome das colunas) e salva essa lista dentro da variável colunas.
-         
+         print(f"Tabela: {arquivo}")
+         print(f"Colunas: {colunas}\n")
+    #O \n serve para pular uma linha em branco no final, deixando o resultado organizado e fácil de ler no terminal.
